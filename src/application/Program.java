@@ -3,7 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import model.service.UsaInterestService;
+import model.service.BrazilInterestService;
+import model.service.InterestService;
 
 public class Program {
 
@@ -16,7 +17,7 @@ public class Program {
 		System.out.print("Months: ");
 		Integer months = sc.nextInt();
 		
-		UsaInterestService is = new UsaInterestService(1.0);
+		InterestService is = new BrazilInterestService(2.0);
 		double payment = is.payment(amount, months);
 		
 		System.out.println("Payment after " + months + " months:");
